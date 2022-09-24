@@ -6,8 +6,8 @@ export default class MyDocument extends Document {
         return <>
             <Html>
                 <Head >
-                    <script src="https://apis.google.com/js/api.js"></script>
                     <script src="https://accounts.google.com/gsi/client" async defer></script>
+                    <script src="https://apis.google.com/js/api.js"></script>
                 </Head>
                 <body>
                     <Main />
