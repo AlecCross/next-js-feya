@@ -2,6 +2,7 @@
   "name": "next-js-feya",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://feya.pp.ua",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
