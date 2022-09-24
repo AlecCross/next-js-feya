@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Head from "next/head"
+import SignIn from "../components/SignIn"
 
 export default function Index() {
   return <>
@@ -11,9 +12,12 @@ export default function Index() {
       />
       <meta charSet="utf-8" />
     </Head>
+    <nav style={{background: "#c51162", padding: 15}}>
+      <Link href={'/contacts'}><a>Контактни</a></Link>
+      <Link href={'/wishlist'}><a>Список бажань</a></Link>
+      <Link href={'/cart'}><a>Кошик</a></Link>
+    </nav>
     <h1>Групи товарів</h1>
-    <Link href={'/contacts'}><a>Контактни</a></Link>
-    <Link href={'/wishlist'}><a>Список бажань</a></Link>
-    <Link href={'/cart'}><a>Кошик</a></Link>
+    <SignIn/>
   </>
 }
