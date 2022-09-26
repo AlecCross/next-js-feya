@@ -40,6 +40,6 @@ export default function SignIn() {
                 <h3>{user.name}</h3>
             </div>
         }
-        <button onClick={(e) => handleSignOut(e)}>Sign Out</button>
+        <button style={{borderRadius: "15%", height: 30, backgroundColor: "white"}} onClick={(e) => handleSignOut(e)}>Sign Out</button>
     </>
 }

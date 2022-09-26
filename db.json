@@ -1,0 +1,29 @@
+{
+    "items": [
+        {
+            "name": "Бренды",
+            "image": "/images/categories/brands.webp",
+            "id": "brands"
+        },
+        {
+            "name": "Бюстгальтеры",
+            "image": "/images/categories/bras.webp",
+            "id": "bras"
+        },
+        {
+            "name": "Трусики",
+            "image": "/images/categories/knickers.webp",
+            "id": "knickers"
+        },
+        {
+            "name": "Эротичекое",
+            "image": "/images/categories/erotic.webp",
+            "id": "erotic"
+        },
+        {
+            "name": "Пляж",
+            "image": "/images/categories/beach.webp",
+            "id": "beach"
+        }
+    ]
+}
