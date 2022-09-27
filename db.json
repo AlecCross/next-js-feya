@@ -3,27 +3,410 @@
         {
             "name": "Бренды",
             "image": "/images/categories/brands.webp",
-            "id": "brands"
+            "id": "brands",
+            "subcategories": [
+                {
+                    "name": "Anfen",
+                    "metaDataKey": "Anfen",
+                    "route": "/brands/anfen",
+                    "imageUrl": "/images/brands/Anfen.webp"
+                },
+                {
+                    "name": "Diorella",
+                    "metaDataKey": "Diorella",
+                    "route": "/brands/diorella",
+                    "imageUrl": "/images/brands/Diorella.webp"
+                },
+                {
+                    "name": "Finikin",
+                    "metaDataKey": "Finikin",
+                    "route": "/brands/finikin",
+                    "imageUrl": "/images/brands/Finikin.webp"
+                },
+                {
+                    "name": "FNNISS",
+                    "metaDataKey": "FNNISS",
+                    "route": "/brands/fniss",
+                    "imageUrl": "/images/brands/FNNISS.webp"
+                },
+                {
+                    "name": "Lanny mode",
+                    "metaDataKey": "Lanny mode",
+                    "route": "/brands/lanny-mode",
+                    "imageUrl": "/images/brands/Lanny mode.webp"
+                },
+                {
+                    "name": "Venus",
+                    "metaDataKey": "Venus",
+                    "route": "/brands/venus",
+                    "imageUrl": "/images/brands/Venus.webp"
+                },
+                {
+                    "name": "Acousma",
+                    "metaDataKey": "Acousma",
+                    "route": "/brands/acousma",
+                    "imageUrl": "/images/brands/Acousma.webp"
+                },
+                {
+                    "name": "Anttifu",
+                    "metaDataKey": "Anttifu",
+                    "route": "/brands/anttifu",
+                    "imageUrl": "/images/brands/ANTTIFU.webp"
+                },
+                {
+                    "name": "Annajolly",
+                    "metaDataKey": "",
+                    "route": "/brands/annajolly",
+                    "imageUrl": "/images/brands/Annajolly.webp"
+                },
+                {
+                    "name": "Beisdanna",
+                    "metaDataKey": "Beisdanna",
+                    "route": "/brands/beisdanna",
+                    "imageUrl": "/images/brands/Beisdanna.webp"
+                },
+                {
+                    "name": "Biweier",
+                    "metaDataKey": "Biweier",
+                    "route": "/brands/biweier",
+                    "imageUrl": "/images/brands/Biweier.webp"
+                },
+                {
+                    "name": "Blue Rose",
+                    "metaDataKey": "Blue Rose",
+                    "route": "/brands/blue-rose",
+                    "imageUrl": "/images/brands/Blue Rose.webp"
+                },
+                {
+                    "name": "Calvin Klein",
+                    "metaDataKey": "Calvin Klein",
+                    "route": "/brands/calvin-klein",
+                    "imageUrl": "/images/brands/Calvin Klein.webp"
+                },
+                {
+                    "name": "Coeur Joie",
+                    "metaDataKey": "Coeur Joie",
+                    "route": "/brands/coeur-joie",
+                    "imageUrl": "/images/brands/COEUR JOIE.webp"
+                },
+                {
+                    "name": "Diana",
+                    "metaDataKey": "Diana",
+                    "route": "/brands/diana",
+                    "imageUrl": "/images/brands/diana-grace-lingerie.webp"
+                },
+                {
+                    "name": "Donafen",
+                    "metaDataKey": "Donafen",
+                    "route": "/brands/donafen",
+                    "imageUrl": "/images/brands/Donafen.webp"
+                },
+                {
+                    "name": "FINETOO",
+                    "metaDataKey": "FINETOO",
+                    "route": "/brands/finetoo",
+                    "imageUrl": "/images/brands/FINETOO lingerie.webp"
+                },
+                {
+                    "name": "FUBA.vi",
+                    "metaDataKey": "FUBA.vi",
+                    "route": "/brands/fuba-vi",
+                    "imageUrl": "/images/brands/FUBA.vi.webp"
+                },
+                {
+                    "name": "Guo. L.Y",
+                    "metaDataKey": "Guo. L.Y",
+                    "route": "/brands/guo-l-y",
+                    "imageUrl": "/images/brands/GU•L•Y.webp"
+                },
+                {
+                    "name": "HY",
+                    "metaDataKey": "HY",
+                    "route": "/brands/hy",
+                    "imageUrl": "/images/brands/HY.webp"
+                },
+                {
+                    "name": "Indena",
+                    "metaDataKey": "Indena",
+                    "route": "/brands/indena ",
+                    "imageUrl": "/images/brands/Indena.webp"
+                },
+                {
+                    "name": "Kable",
+                    "metaDataKey": "Kable",
+                    "route": "/brands/kable",
+                    "imageUrl": "/images/brands/KABLE.webp"
+                },
+                {
+                    "name": "Kesell",
+                    "metaDataKey": "Kesell",
+                    "route": "/brands/kesell",
+                    "imageUrl": "/images/brands/KESELL.webp"
+                },
+                {
+                    "name": "Lavivas",
+                    "metaDataKey": "Lavivas",
+                    "route": "/brands/lavivas",
+                    "imageUrl": "/images/brands/Lavivas.webp"
+                },
+                {
+                    "name": "Lavolle",
+                    "metaDataKey": "Lavolle",
+                    "route": "/brands/lavolle",
+                    "imageUrl": "/images/brands/LAVOLLE.webp"
+                },
+                {
+                    "name": "Lue rrose",
+                    "metaDataKey": "Lue rrose",
+                    "route": "/brands/lue-rrose",
+                    "imageUrl": "/images/brands/Lue rrose.webp"
+                },
+                {
+                    "name": "LuLoLa",
+                    "metaDataKey": "LuLoLa",
+                    "route": "/brands/lulola",
+                    "imageUrl": "/images/brands/LuLoLa.webp"
+                },
+                {
+                    "name": "Masdana",
+                    "metaDataKey": "Masdana",
+                    "route": "/brands/masdana",
+                    "imageUrl": "/images/brands/Masdana.webp"
+                },
+                {
+                    "name": "Milasi",
+                    "metaDataKey": "Milasi",
+                    "route": "/brands/milasi",
+                    "imageUrl": "/images/brands/Milasi.webp"
+                },
+                {
+                    "name": "Milavitsa",
+                    "metaDataKey": "Milavitsa",
+                    "route": "/brands/milavitsa",
+                    "imageUrl": "/images/brands/milavitsa.webp"
+                },
+                {
+                    "name": "Nadizi",
+                    "metaDataKey": "Nadizi",
+                    "route": "/brands/nadizi",
+                    "imageUrl": "/images/brands/NADIZI.webp"
+                },
+                {
+                    "name": "Porlloma",
+                    "metaDataKey": "",
+                    "route": "/brands/porlloma",
+                    "imageUrl": "/images/brands/Porlloma.webp"
+                },
+                {
+                    "name": "S·Kaifei",
+                    "metaDataKey": "S·Kaifei",
+                    "route": "/brands/skaifei",
+                    "imageUrl": "/images/brands/S·Kaifei.webp"
+                },
+                {
+                    "name": "Weiyesi",
+                    "metaDataKey": "Weiyesi",
+                    "route": "/brands/weiyesi",
+                    "imageUrl": "/images/brands/Weiyesi.webp"
+                },
+                {
+                    "name": "Yenvy",
+                    "metaDataKey": "Yenvy",
+                    "route": "/brands/yenvy",
+                    "imageUrl": "/images/brands/Yenvy.webp"
+                },
+                {
+                    "name": "Люся",
+                    "metaDataKey": "Люся",
+                    "route": "/brands/lusya",
+                    "imageUrl": "/images/brands/Люся.webp"
+                }
+            ]
         },
         {
             "name": "Бюстгальтеры",
             "image": "/images/categories/bras.webp",
-            "id": "bras"
+            "id": "bras",
+            "subcategories": [
+                {
+                    "name": "С поролоном",
+                    "metaDataKey": "С поролоном",
+                    "route": "/bras/foam",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/foam.webp"
+                },
+                {
+                    "name": "Пуш-ап",
+                    "metaDataKey": "Пуш-ап",
+                    "route": "/bras/push-up",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/push-up.webp"
+                },
+                {
+                    "name": "Полупоролон",
+                    "metaDataKey": "Полупоролон",
+                    "route": "/bras/semi-foam",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/semi-foam.webp"
+                },
+                {
+                    "name": "Тонкий поролон",
+                    "metaDataKey": "Тонкий поролон",
+                    "route": "/bras/thin-foam",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/thin-foam.webp"
+                },
+                {
+                    "name": "Без косточек",
+                    "metaDataKey": "Без косточек",
+                    "route": "/bras/boneless",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/boneless.webp"
+                },
+                {
+                    "name": "Без поролона",
+                    "metaDataKey": "Без поролона",
+                    "route": "/bras/no-foam",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/no-foam.webp"
+                },
+                {
+                    "name": "Для кормления",
+                    "metaDataKey": "Для кормления",
+                    "route": "/bras/nursing",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/nursing.webp"
+                },
+                {
+                    "name": "Бюстье",
+                    "metaDataKey": "Бюстье",
+                    "route": "/bras/bustier",
+                    "sizeTable": "bras",
+                    "imageUrl": "/images/bras/bustier.webp"
+                }
+            ]
         },
         {
             "name": "Трусики",
             "image": "/images/categories/knickers.webp",
-            "id": "knickers"
+            "id": "knickers",
+            "subcategories": [
+                {
+                    "name": "Бикини",
+                    "metaDataKey": "Бикини",
+                    "route": "/knickers/bikini",
+                    "sizeTable": "knickers",
+                    "imageUrl": "/images/knickers/bikini.webp"
+                },
+                {
+                    "name": "Бесшовные",
+                    "metaDataKey": "Бесшовные",
+                    "route": "/knickers/bodyshort",
+                    "sizeTable": "knickers",
+                    "imageUrl": "/images/knickers/bodyshort.webp"
+                },
+                {
+                    "name": "Бразильяны",
+                    "metaDataKey": "Бразильяны",
+                    "route": "/knickers/brazilian",
+                    "sizeTable": "knickers",
+                    "imageUrl": "/images/knickers/brazilian.webp"
+                },
+                {
+                    "name": "Норма, Слипы",
+                    "metaDataKey": "Норма, Слипы",
+                    "route": "/knickers/brief",
+                    "sizeTable": "knickers",
+                    "imageUrl": "/images/knickers/brief.webp"
+                },
+                {
+                    "name": "Стринги",
+                    "metaDataKey": "Стринги",
+                    "route": "/knickers/g-string",
+                    "sizeTable": "knickers",
+                    "imageUrl": "/images/knickers/g-string.webp"
+                },
+                {
+                    "name": "Батальные",
+                    "metaDataKey": "Батальные",
+                    "sizeTable": "knickers",
+                    "route": "/knickers/hipster",
+                    "imageUrl": "/images/knickers/hipster.webp"
+                },
+                {
+                    "name": "Шорты/Панталоны",
+                    "sizeTable": "knickers",
+                    "route": "/knickers/shorts-trousers",
+                    "imageUrl": "/images/knickers/shorts-trousers.webp"
+                },
+                {
+                    "name": "Корректирующее",
+                    "metaDataKey": "Корректирующее",
+                    "sizeTable": "knickers",
+                    "route": "/knickers/shapewear",
+                    "imageUrl": "/images/knickers/shapewear.webp"
+                }
+            ]
         },
         {
             "name": "Эротичекое",
             "image": "/images/categories/erotic.webp",
-            "id": "erotic"
+            "id": "erotic",
+            "subcategories": [
+                {
+                    "name": "Пеньюары",
+                    "metaDataKey": "Пеньюары",
+                    "route": "/erotic/peignoir",
+                    "sizeTable": "peignoir",
+                    "imageUrl": "/images/erotic/peignoir.webp"
+                },
+                {
+                    "name": "Пояса",
+                    "metaDataKey": "Пояса",
+                    "route": "/erotic/belts",
+                    "sizeTable": "belts",
+                    "imageUrl": "/images/erotic/belts.webp"
+                },
+                {
+                    "name": "Маски",
+                    "metaDataKey": "Маски",
+                    "route": "/erotic/masks",
+                    "sizeTable": "masks",
+                    "imageUrl": "/images/erotic/masks.webp"
+                },
+                {
+                    "name": "Бралье",
+                    "metaDataKey": "Бралье",
+                    "route": "/erotic/braille",
+                    "sizeTable": "braille",
+                    "imageUrl": "/images/erotic/braille.webp"
+                }
+            ]
         },
         {
             "name": "Пляж",
             "image": "/images/categories/beach.webp",
-            "id": "beach"
+            "id": "beach",
+            "subcategories": [
+                {
+                    "name": "Женское (Пляж)",
+                    "metaDataKey": "Женское (Пляж)",
+                    "route": "/beach/feminine",
+                    "imageUrl": "/images/beach/feminine.webp"
+                },
+                {
+                    "name": "Детское (Пляж)",
+                    "metaDataKey": "Детское (Пляж)",
+                    "route": "/beach/baby",
+                    "imageUrl": "/images/beach/baby.webp"
+                },
+                {
+                    "name": "Мужское (Пляж)",
+                    "metaDataKey": "Мужское (Пляж)",
+                    "route": "/beach/male",
+                    "imageUrl": "/images/beach/male.webp"
+                }
+            ]
         }
     ]
 }

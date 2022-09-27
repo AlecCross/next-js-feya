@@ -5,9 +5,7 @@ export default function SignIn() {
     const [user, setUser] = useState({})
 
     function handleCallbackResponce(response) {
-        console.log("ID: " + response.credential)
         const userObj = jwt_decode(response.credential)
-        console.log(userObj)
         setUser(userObj)
         document.getElementById("signInDiv").hidden = true
     }

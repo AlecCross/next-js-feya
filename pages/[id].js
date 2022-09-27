@@ -1,34 +1,38 @@
 import { useRouter } from "next/router"
 import React from "react"
 import Router from "next/router"
-import Image from "next/image"
+import db from "../db.json"
 
-export default function Details({ burger }) {
+export default function Details({ category }) {
     const router = useRouter()
-    console.log(burger)
     return <>
         <button onClick={() => Router.push('/')}>{"< На Головну"}</button>
-        <div>{router.query.burger}</div>
-        <div>{burger.name}</div>
-        <Image
-            src={`${burger.image}`}
-            alt={`${burger.name}`}
-            width="100%"
-            height="100%"
-            Layout="responsive"
-            objectFit="cover"
-        />
-        <div>{burger.desc}</div>
+        <div>{router.query.category}</div>
+        <div>{category.name}</div>
+        <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr)",
+            gridAutoRows: "330px",
+        }}>
+            {category.subcategories.map(subcategory => <div key={subcategory.name}>
+                <img
+                    src={`${subcategory.imageUrl}`}
+                    alt={`${subcategory.name}`}
+                    width="300px"
+                    height="300px"
+                />
+                <div style={{ textAlign: "center" }}>{subcategory.name}</div>
+            </div>
+            )}
+        </div>
     </>
 }
 
 export const getStaticPaths = async () => {
-    const res = await fetch('http://localhost:8000/items')
-    const data = await res.json()
-    console.log(data)
-    const paths = data.map(burger => {
+
+    const paths = db.items.map(category => {
         return {
-            params: { id: burger.id }
+            params: { id: category.id }
         }
     })
 
@@ -39,14 +43,13 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
-    const id = context.params.id
 
-    const res = await fetch(`http://localhost:8000/items/${id}`)
-    const data = await res.json()
+    let findId2 = {}
+    db.items.forEach(item => { if (item.id === context.params.id) findId2 = item })
 
     return {
         props: {
-            burger: data
+            category: findId2
         }
     }
 }

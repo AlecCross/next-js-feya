@@ -1,11 +1,9 @@
 import Link from "next/link"
 import Head from "next/head"
 import SignIn from "../components/SignIn"
-import categoriesData from "../data/categoriesData"
-import Image from "next/image"
+import db from "../db.json"
 
 export default function Index({ categories }) {
-  console.log(categories)
   return <>
     <Head>
       <title>Фея🧚‍♀️ | Інтернет магазин спідньої білизни</title>
@@ -21,21 +19,19 @@ export default function Index({ categories }) {
       <Link href={'/cart'}><a style={{ padding: "1%", color: "white" }}>Кошик</a></Link>
       <SignIn />
     </nav>
-    <h1 style={{display: "flex", justifyContent: "center"}}>Групи товарів</h1>
+    <h1 style={{ display: "flex", justifyContent: "center" }}>Групи товарів</h1>
 
     <ul style={{ display: "flex", justifyContent: "center" }}>
-      {categories.map(category =>
+      {categories.items.map(category =>
         <li style={{ padding: "1%" }} key={category.id}>
           <Link href={`${category.id}`} >
             <a>
               <div>
-                <Image
+                <img
                   src={`${category.image}`}
                   alt={`${category.name}`}
                   width="100%"
                   height="100%"
-                  // Layout="responsive"
-                  objectFit="cover"
                 />
               </div>
               <div>
@@ -51,11 +47,9 @@ export default function Index({ categories }) {
 }
 
 export const getStaticProps = async () => {
-  const res = await fetch('http://localhost:8000/items')
-  const data = await res.json()
 
   return {
 
-    props: { categories: data }
+    props: { categories: db }
   }
 }
