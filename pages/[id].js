@@ -1,41 +1,22 @@
-import { useRouter } from "next/router"
 import React from "react"
-import Router from "next/router"
+import Category from "../components/Category"
 import db from "../db.json"
+import PageContainer from "../components/PageContainer"
 
 export default function Details({ category }) {
-    const router = useRouter()
     return <>
-        <button onClick={() => Router.push('/')}>{"< На Головну"}</button>
-        <div>{router.query.category}</div>
-        <div>{category.name}</div>
-        <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr)",
-            gridAutoRows: "330px",
-        }}>
-            {category.subcategories.map(subcategory => <div key={subcategory.name}>
-                <img
-                    src={`${subcategory.imageUrl}`}
-                    alt={`${subcategory.name}`}
-                    width="300px"
-                    height="300px"
-                />
-                <div style={{ textAlign: "center" }}>{subcategory.name}</div>
-            </div>
-            )}
-        </div>
+        <PageContainer header={category.name}>
+            <Category seo={category.name} category={category} />
+        </PageContainer>
     </>
 }
 
 export const getStaticPaths = async () => {
-
     const paths = db.items.map(category => {
         return {
             params: { id: category.id }
         }
     })
-
     return {
         paths,
         fallback: false //Чтоб при неверном url отобразить 404
@@ -43,10 +24,8 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context) => {
-
     let findId2 = {}
     db.items.forEach(item => { if (item.id === context.params.id) findId2 = item })
-
     return {
         props: {
             category: findId2

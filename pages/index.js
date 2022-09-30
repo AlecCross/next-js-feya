@@ -1,7 +1,7 @@
-import Link from "next/link"
 import Head from "next/head"
-import SignIn from "../components/SignIn"
 import db from "../db.json"
+import PageContainer from "../components/PageContainer"
+import Link from "next/link"
 
 export default function Index({ categories }) {
   return <>
@@ -13,36 +13,27 @@ export default function Index({ categories }) {
       />
       <meta charSet="utf-8" />
     </Head>
-    <nav style={{ display: "flex", justifyContent: "center", background: "#c51162", height: 50 }}>
-      <Link href={'/contacts'}><a style={{ padding: "1%", color: "white" }}>Контактни</a></Link>
-      <Link href={'/wishlist'}><a style={{ padding: "1%", color: "white" }}>Список бажань</a></Link>
-      <Link href={'/cart'}><a style={{ padding: "1%", color: "white" }}>Кошик</a></Link>
-      <SignIn />
-    </nav>
-    <h1 style={{ display: "flex", justifyContent: "center" }}>Групи товарів</h1>
-
-    <ul style={{ display: "flex", justifyContent: "center" }}>
-      {categories.items.map(category =>
-        <li style={{ padding: "1%" }} key={category.id}>
-          <Link href={`${category.id}`} >
-            <a>
-              <div>
+    <PageContainer header={"Групи товарів"}>
+      <ul style={{
+        display: "flex", justifyContent: "center", flexWrap: "wrap", marginLeft: 0, paddingLeft: 0
+      }}>
+        {categories.items.map(category =>
+          <li style={{ padding: "1%", listStyleType: "none" }} key={category.id}>
+            <Link href={`${category.id}`} >
+              <a>
                 <img
                   src={`${category.image}`}
                   alt={`${category.name}`}
-                  width="100%"
-                  height="100%"
+                  width="300px"
+                  height="300px"
                 />
-              </div>
-              <div>
-                <h3>{category.name}</h3>
-                <p>{category.desc}</p>
-              </div>
-            </a>
-          </Link>
-        </li>
-      )}
-    </ul>
+                <div style={{ textAlign: "center" }}>{category.name}</div>
+              </a>
+            </Link>
+          </li>
+        )}
+      </ul>
+    </PageContainer>
   </>
 }
 
