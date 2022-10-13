@@ -29,7 +29,8 @@ export default function SignIn() {
         google.accounts.id.prompt()
     }, [])
 
-    return <>
+    return <div style={{display: "flex",
+    justifyContent: "center",}}>
         <div id="signInDiv"></div>
         {
             user &&
@@ -39,5 +40,5 @@ export default function SignIn() {
             </div>
         }
         <button style={{borderRadius: "15%", height: 30, backgroundColor: "white"}} onClick={(e) => handleSignOut(e)}>Sign Out</button>
-    </>
+    </div>
 }

@@ -1,0 +1,68 @@
+import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SwiperCore, { Navigation, Scrollbar, A11y, Autoplay } from 'swiper'
+import 'swiper/css'
+// import 'swiper/swiper.min.css'
+// import 'swiper/components/pagination'
+// import 'swiper/components/scrollbar'
+import styles from '../css.module/slider.module.css'
+import { sliderData } from '../data/sliderData'
+import contactsData from "../data/contactsData"
+// import { useTranslation } from "react-i18next"
+import dynamic from 'next/dynamic'
+// import { SliderLink } from '..'
+
+const Slider = () => {
+    SwiperCore.use([Navigation, Scrollbar, A11y, Autoplay])
+
+    // const { t } = useTranslation()
+    return <div style={{ margin: "0 3px 30px 3px" }}>
+        <Swiper className={styles.slider}
+            autoplay={
+                { delay: 7000 }
+            }
+            spaceBetween={0}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+        >
+            {/* <SwiperSlide>
+                <video className={styles.slider} autoPlay="autoplay" muted loop src={sliderData.flagSlider.link} />
+            </SwiperSlide> */}
+            {/* {sliderData.basicSlides.map((slide, index) =>
+                <SwiperSlide
+                    key={index}>
+                    <SliderLink link={slide.pageLink} isOuterURL={slide.isOuterURL}>
+                        <img
+                            className={styles.slider}
+                            alt="Изображение"
+                            width={slide.image.width}
+                            height={slide.image.height}
+                            src={slide.image.src} />
+                        <h1 className={styles[slide.styleHeadingText]}>{t(slide.headingText)}</h1>
+                        <div className={styles[slide.wrapper]}>
+                            {t(slide.textBelow).split(';').map((text, index) =>
+                                <div key={index} className={styles[slide.styleTextBelow]}>{t(text)}</div>)}
+                        </div>
+                    </SliderLink>
+                </SwiperSlide>)} */}
+            {/* <SwiperSlide>
+                <a href={contactsData.instagramLink} target="_blank" rel="noopener noreferrer" >
+                    <img className={styles.slider} alt="Изображение"
+                        width={sliderData.instagramSlider.image.width}
+                        height={sliderData.instagramSlider.image.height}
+                        src={sliderData.instagramSlider.image.src} />
+                    <h1 className={styles.instagram} style={{ paddingTop: 5 }} >{contactsData.instagram}</h1>
+                </a>
+            </SwiperSlide> */}
+            <SwiperSlide>123</SwiperSlide>
+            <SwiperSlide>123</SwiperSlide>
+            <SwiperSlide>123</SwiperSlide>
+            <SwiperSlide>123</SwiperSlide>
+        </Swiper>
+    </div>
+}
+
+export default dynamic(()=> Promise.resolve(Slider),{
+    ssr: false
+})

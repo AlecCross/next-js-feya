@@ -2,6 +2,7 @@ import Head from "next/head"
 import db from "../db.json"
 import PageContainer from "../components/PageContainer"
 import Link from "next/link"
+import Slider from "../components/Slider"
 
 export default function Index({ categories }) {
   return <>
@@ -14,6 +15,7 @@ export default function Index({ categories }) {
       <meta charSet="utf-8" />
     </Head>
     <PageContainer header={"Групи товарів"}>
+      <Slider/>
       <ul style={{
         display: "flex", justifyContent: "center", flexWrap: "wrap", marginLeft: 0, paddingLeft: 0
       }}>
