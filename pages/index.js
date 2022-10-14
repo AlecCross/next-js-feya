@@ -3,6 +3,7 @@ import db from "../db.json"
 import PageContainer from "../components/PageContainer"
 import Link from "next/link"
 import Slider from "../components/Slider"
+import gridStyle from "../css.module/grid.module.css"
 
 export default function Index({ categories }) {
   return <>
@@ -15,21 +16,17 @@ export default function Index({ categories }) {
       <meta charSet="utf-8" />
     </Head>
     <PageContainer header={"Групи товарів"}>
-      <Slider/>
-      <ul style={{
-        display: "flex", justifyContent: "center", flexWrap: "wrap", marginLeft: 0, paddingLeft: 0
-      }}>
+      {/* <Slider /> */}
+      <ul className={gridStyle.container}>
         {categories.items.map(category =>
-          <li style={{ padding: "1%", listStyleType: "none" }} key={category.id}>
+          <li className={gridStyle.element} key={category.id}>
             <Link href={`${category.id}`} >
               <a>
-                <img
+                <img className={gridStyle.element__img}
                   src={`${category.image}`}
                   alt={`${category.name}`}
-                  width="300px"
-                  height="300px"
                 />
-                <div style={{ textAlign: "center" }}>{category.name}</div>
+                <div className={gridStyle.element__name}>{category.name}</div>
               </a>
             </Link>
           </li>
