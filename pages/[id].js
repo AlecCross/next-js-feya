@@ -14,13 +14,15 @@ export default function Details({ category }) {
 export const getStaticPaths = async () => {
     const paths = db.items.map(category => {
         return {
-            params: { id: category.id }
+            params: { id: category.id.toString() }
         }
     })
+    console.log(paths)
     return {
         paths,
         fallback: false //Чтоб при неверном url отобразить 404
     }
+    
 }
 
 export const getStaticProps = async (context) => {
