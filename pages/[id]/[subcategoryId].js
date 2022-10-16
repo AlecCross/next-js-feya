@@ -1,19 +1,30 @@
 import React from 'react'
 import PageContainer from '../../components/PageContainer'
 import db from "../../db.json"
-import { gql } from "@apollo/client";
-import client from "../../apollo-client";
+import { gql } from "@apollo/client"
+import client from "../../apollo-client"
+import gridStyle from "../../css.module/grid.module.css"
+import Link from "next/link"
 
 export default function Subcategory(props) {
-    console.log(props.apolloData)
     return <>
-        <PageContainer header={props.subCategory.name}>
-            <img
-                src={`${props.subCategory.imageUrl}`}
-                alt={`${props.subCategory.name}`}
-            />
-            {Object.values(props.apolloData.categoryProducts).map(
-                product => <div key={product.id}>{product.name}</div>)}
+        <PageContainer header={props.subCategoryData.subCategory.name}>
+            <ul className={gridStyle.container}>
+                {Object.values(props.apolloData.categoryProducts).map(
+                    product =>
+                        <li className={gridStyle.element} key={product.id}>
+                            <Link href={`/${props.subCategoryData.category.id}/${props.subCategoryData.subCategory.subcategoryId}/${product.id}`} >
+                                <a>
+                                    <img className={gridStyle.element__img}
+                                        src={`${product.images[0]}`}
+                                        alt={`${product.name}`}
+                                    />
+                                    <div className={gridStyle.element__name}>{product.name}</div>
+                                </a>
+                            </Link>
+                        </li>
+                )}
+            </ul>
         </PageContainer>
     </>
 }
@@ -37,29 +48,30 @@ export const getStaticPaths = async () => {
 }
 
 export const getStaticProps = async (props) => {
-    let test2 = {}
+    let test2
     db.items.forEach(item => {
         if (item.id === props.params.id)
             item.subcategories.forEach(subCat => {
-                if (subCat.subcategoryId === props.params.subcategoryId) test2 = subCat
+                if (subCat.subcategoryId === props.params.subcategoryId) test2 = { category: item, subCategory: subCat }
             })
     })
+
     const { data } = await client.query({
         query: gql`
         query MyQuery($categoryName: [String]!) {
             categoryProducts(categoryName: $categoryName) {
                 id
                 name
+                images
             }
         }
-        `, variables: { categoryName: test2.name }
+        `, variables: { categoryName: test2.subCategory.name }
     })
 
-    console.log(data)
     return {
         props: {
             apolloData: data,
-            subCategory: test2
+            subCategoryData: test2
         }
     }
 }

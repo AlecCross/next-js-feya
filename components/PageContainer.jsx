@@ -1,5 +1,6 @@
 import React from 'react'
 import NavBar from './NavBar'
+import Footer from './Footer'
 
 export default function PageContainer({ children, header }) {
     return <>
@@ -8,9 +9,7 @@ export default function PageContainer({ children, header }) {
             <h1 style={{ display: "flex", justifyContent: "center", margin: "70px 0 0 0" }} >{header}</h1>
             <div>{children}</div>
         </div>
-        <footer style={{ display: "flex", justifyContent: "center", background: "#c51162", height: 150 }}>
-            <h1 style={{ color: "white" }}>Feya</h1>
-        </footer>
+        <Footer/>
         <style jsx>{
             `
             .container {

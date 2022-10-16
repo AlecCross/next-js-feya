@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from "next/link"
 import Head from 'next/head'
+import gridStyle from "../css.module/grid.module.css"
+import PageContainer from "../components/PageContainer"
 
 export default function Category({ category, seo }) {
     return <>
@@ -12,23 +14,22 @@ export default function Category({ category, seo }) {
             />
             <meta charSet="utf-8" />
         </Head>
-        <ul style={{
-            display: "flex", justifyContent: "center", flexWrap: "wrap", marginLeft: 0, paddingLeft: 0
-        }}>
-            {category.subcategories.map(subcategory => <li style={{ padding: "1%", listStyleType: "none" }} key={subcategory.name}>
-                <Link href={`${category.id}/${subcategory.subcategoryId}`} >
-                    <a>
-                        <img
-                            src={`${subcategory.imageUrl}`}
-                            alt={`${subcategory.name}`}
-                            width="300px"
-                            height="300px"
-                        />
-                        <div style={{ textAlign: "center" }}>{subcategory.name}</div>
-                    </a>
-                </Link>
-            </li>
+        <PageContainer header={category.name}>
+        <ul className={gridStyle.container}>
+            {category.subcategories.map(subcategory =>
+                <li className={gridStyle.element} key={subcategory.name}>
+                    <Link href={`${category.id}/${subcategory.subcategoryId}`} >
+                        <a>
+                            <img className={gridStyle.element__img}
+                                src={`${subcategory.imageUrl}`}
+                                alt={`${subcategory.name}`}
+                            />
+                            <div className={gridStyle.element__name}>{subcategory.name}</div>
+                        </a>
+                    </Link>
+                </li>
             )}
         </ul>
+        </PageContainer>
     </>
 }
