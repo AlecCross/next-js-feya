@@ -3,7 +3,7 @@ import Category from "../components/Category"
 import db from "../db.json"
 
 export default function Details({ category }) {
-    console.log(category)
+    // console.log(category)
     return <>
             <Category seo={category.name} category={category} />
     </>
@@ -15,7 +15,7 @@ export const getStaticPaths = async () => {
             params: { id: category.id.toString() }
         }
     })
-    console.log(paths)
+    // console.log(paths)
     return {
         paths,
         fallback: false //Чтоб при неверном url отобразить 404

@@ -1,5 +1,10 @@
 export default function MyApp({ Component, pageProps }) {
-    return <>
+    return <div style={{
+        display: "flex",
+        minHeight: "100vh",
+        flexDirection: "column",
+        backgroundImage: `url(/images/background.webp)`
+    }}>
         <Component {...pageProps} />
         <style jsx global>
             {`
@@ -44,5 +49,5 @@ export default function MyApp({ Component, pageProps }) {
             h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
             `}
         </style>
-    </>
+    </div>
 }

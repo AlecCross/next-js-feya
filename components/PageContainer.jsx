@@ -5,11 +5,11 @@ import Footer from './Footer'
 export default function PageContainer({ children, header }) {
     return <>
         <NavBar />
-        <div className="container">
-            <h1 style={{ display: "flex", justifyContent: "center", margin: "70px 0 0 0" }} >{header}</h1>
+        <div className="container" style={{ position: "relative", top: 70, zIndex: 0 }}>
+            <h1 style={{ borderColor: "white", textAlign: "center", }} >{header}</h1>
             <div>{children}</div>
         </div>
-        <Footer/>
+        <Footer />
         <style jsx>{
             `
             .container {
