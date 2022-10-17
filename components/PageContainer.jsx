@@ -1,10 +1,12 @@
 import React from 'react'
 import NavBar from './NavBar'
 import Footer from './Footer'
+import MultiButton from './MultiButton'
 
 export default function PageContainer({ children, header }) {
     return <>
         <NavBar />
+        <MultiButton/>
         <div className="container" style={{ position: "relative", top: 70, zIndex: 0 }}>
             <h1 style={{ borderColor: "white", textAlign: "center", }} >{header}</h1>
             <div>{children}</div>
