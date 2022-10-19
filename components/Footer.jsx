@@ -3,14 +3,32 @@ import contactsData from "../data/contactsData"
 
 export default function Footer() {
     return (
-        <footer style={{
-            background: "#c51162",
-            position: "fixed",
-            bottom: 0,
-            left: 0,
-            clear: "both",
-            width: "100%"
-        }}>
+        <footer
+            // style={{
+            //     background: "#c51162",
+            //     position: "absolute",
+            //     bottom: "0",
+            //     width: "100%",
+            //     height: "2.5rem",
+            //     clear: "both",
+            //     width: "100%"
+            // }}
+            style={{
+                // background: "#c51162",
+                // position: "absolute",
+                // bottom: "0",
+                // width: "100%",
+                // height: "2.5rem",
+                // clear: "both",
+                // width: "100%",
+                background: "#c51162",
+                position: "absolute",
+                // height: 200,
+                
+                bottom: "-11.1%",
+                width: "100%",
+                height: 250 ,
+            }}>
             {
                 contactsData.contacts.map((contact, index) =>
                     <div
