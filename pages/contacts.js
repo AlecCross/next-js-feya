@@ -2,6 +2,7 @@ import Head from "next/head"
 import React from "react"
 import PageContainer from "../components/PageContainer"
 import contactsData from "../data/contactsData"
+import contactsStyles from "../css.module/contacts.module.css"
 
 export default function Index() {
     return <>
@@ -14,19 +15,22 @@ export default function Index() {
             <meta charSet="utf-8" />
         </Head>
         <PageContainer header={"Контактна інформація"}>
-            {contactsData.contacts.map((contact, index) =>
-                <div key={index}><a
-                    href={contact.link}
-                    target={"_blank"}
-                    rel={"noopener noreferrer"}
-                    
-                >
-                    {contact.svgIcon}
-                    <div style={{ display: "inline-block", position: "absolute", paddingTop: "1vw", paddingLeft: "1vw" }}>
-                        {contact.description}
-                        {contact.name}
-                    </div>
-                </a></div>)}
+            <div className={contactsStyles.wrapper}>
+                {contactsData.contacts.map((contact, index) =>
+                    <div className={contactsStyles.element}
+                        key={index}><a
+                            href={contact.link}
+                            target={"_blank"}
+                            rel={"noopener noreferrer"}
+                        >
+                            {contact.svgIcon}
+                            <div className={contactsStyles.list}>
+                                {contact.description}
+                                {contact.name}
+                            </div>
+                        </a></div>
+                )}
+            </div>
         </PageContainer>
     </>
 }

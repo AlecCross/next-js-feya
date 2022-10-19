@@ -12,6 +12,16 @@ export default function Index() {
             />
             <meta charSet="utf-8" />
         </Head>
-        <PageContainer header={"Список бажань"}></PageContainer>
+        <PageContainer header={"Список бажань"}>
+            <h2 style={{ textAlign: "center", fontSize: 26 }}>У списку бажань немає товарів.</h2>
+            <button style={{
+                background: "#c51162",
+                color: "white",
+                fontSize: "min(2.5vw, 14px)",
+                margin: "10px 40%",
+                padding: "8px 20px",
+                borderRadius: "2px"
+            }}>⬅&nbsp;&nbsp;&nbsp;ДО ПОКУПОК</button>
+        </PageContainer>
     </>
 }

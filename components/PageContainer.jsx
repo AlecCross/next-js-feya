@@ -2,24 +2,18 @@ import React from 'react'
 import NavBar from './NavBar'
 import Footer from './Footer'
 import MultiButton from './MultiButton'
-import pageContainer from "../css.module/pageContainer.module.css"
+import pageContainerStyles from "../css.module/pageContainer.module.css"
+import footerStyles from "../css.module/footer.module.css"
 
 export default function PageContainer({ children, header }) {
-    return <div style={{
-        position: "relative",
-        minHeight: "90vh"
-    }}>
-
+    return <div className={footerStyles.bottomPos}>
         <NavBar />
         <MultiButton />
-        <div className={pageContainer.container}>
-            <div
-                style={{ textAlign: "center", paddingTop: 10 }}
-            >
+        <div className={pageContainerStyles.container}>
+            <div className={pageContainerStyles.headerTitle}>
                 {header}
             </div>
             <div
-            // style={{ paddingBottom: "0%", flex: "1 1 0%" }}
             >{children}</div>
         </div>
         <Footer />
