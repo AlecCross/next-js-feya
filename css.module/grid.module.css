@@ -16,7 +16,14 @@
     z-index: 8;
 }
 
-.element__img {}
+.element__img_wrapper {
+    aspect-ratio: auto 1 / 1
+}
+
+.element__img {
+    height: 100%;
+    width: 50%;
+}
 
 .element__name {
     text-align: center;

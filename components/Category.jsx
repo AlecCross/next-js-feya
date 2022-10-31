@@ -15,21 +15,23 @@ export default function Category({ category, seo }) {
             <meta charSet="utf-8" />
         </Head>
         <PageContainer header={category.name}>
-        <ul className={gridStyle.container}>
-            {category.subcategories.map(subcategory =>
-                <li className={gridStyle.element} key={subcategory.name}>
-                    <Link href={`${category.id}/${subcategory.subcategoryId}`} >
-                        <a>
-                            <img className={gridStyle.element__img}
-                                src={`${subcategory.imageUrl}`}
-                                alt={`${subcategory.name}`}
-                            />
-                            <div className={gridStyle.element__name}>{subcategory.name}</div>
-                        </a>
-                    </Link>
-                </li>
-            )}
-        </ul>
+            <ul className={gridStyle.container}>
+                {category.subcategories.map(subcategory =>
+                    <li className={gridStyle.element} key={subcategory.name}>
+                        <Link href={`${category.id}/${subcategory.subcategoryId}`} >
+                            <a>
+                            <div className={gridStyle.element__img_wrapper}>
+                                    <img className={gridStyle.element__img}
+                                        src={`${subcategory.imageUrl}`}
+                                        alt={`${subcategory.name}`}
+                                    />
+                                </div>
+                                <div className={gridStyle.element__name}>{subcategory.name}</div>
+                            </a>
+                        </Link>
+                    </li>
+                )}
+            </ul>
         </PageContainer>
     </>
 }

@@ -15,10 +15,12 @@ export default function Subcategory(props) {
                         <li className={gridStyle.element} key={product.id}>
                             <Link href={`/${props.subCategoryData.category.id}/${props.subCategoryData.subCategory.subcategoryId}/${product.id}`} >
                                 <a>
-                                    <img className={gridStyle.element__img}
-                                        src={`${product.images[0]}`}
-                                        alt={`${product.name}`}
-                                    />
+                                    <div className={gridStyle.element__img_wrapper}>
+                                        <img className={gridStyle.element__img}
+                                            src={`${product.images[0]}`}
+                                            alt={`${product.name}`}
+                                        />
+                                    </div>
                                     <div className={gridStyle.element__name}>{product.name}</div>
                                 </a>
                             </Link>

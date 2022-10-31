@@ -22,10 +22,12 @@ export default function Index({ categories }) {
           <li className={gridStyle.element} key={category.id}>
             <Link href={`${category.id}`} >
               <a>
-                <img className={gridStyle.element__img}
-                  src={`${category.image}`}
-                  alt={`${category.name}`}
-                />
+                <div className={gridStyle.element__img_wrapper}>
+                  <img className={gridStyle.element__img}
+                    src={`${category.image}`}
+                    alt={`${category.name}`}
+                  />
+                </div>
                 <div className={gridStyle.element__name}>{category.name}</div>
               </a>
             </Link>
